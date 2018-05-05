@@ -14,7 +14,7 @@ Ejercitar la escritura de código en ambientes colaborativos utilizando una meto
 Nro | Nombre      | Legajo   | Mail
 ----|-------------|----------|------
 1   |Lisa  Romero |  32939   | lisar3467@gmail.com
-2   |        |        |
+2   |Ibarra Marcos|  33383   | mni_1996@yahoo.com.ar
 3   |        |        |
 4   |        |        |
     
