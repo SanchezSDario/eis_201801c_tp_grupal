@@ -11,10 +11,10 @@ Ejercitar la escritura de código en ambientes colaborativos utilizando una meto
 
 ### Integrantes
 
-Nro | Nombre | Legajo | Mail
-----|--------|--------|------
-1   |        |        |
-2   |        |        |
+Nro | Nombre      | Legajo   | Mail
+----|-------------|----------|------
+1   |Lisa  Romero |  32939   | lisar3467@gmail.com
+2   |        |        |
 3   |        |        |
 4   |        |        |
     
