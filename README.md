@@ -15,7 +15,7 @@ Nro | Nombre      | Legajo   | Mail
 ----|-------------|----------|------
 1   |Lisa  Romero |  32939   | lisar.3467@gmail.com
 2   |Ibarra Marcos|  33383   | mni_1996@yahoo.com.ar
-3   |        |        |
+3   |Ruiz Nicolás |  32405   | nicoruiz182@gmail.com
 4   |        |        |
     
 ### Entrega
