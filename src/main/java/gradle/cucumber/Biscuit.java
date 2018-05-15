@@ -1,13 +1,8 @@
 package gradle.cucumber;
 
-public class Biscuit {
-    private int valor;
-
-    public Biscuit() {
-        valor = 5;
-    }
+public class Biscuit implements Comestible{
 
     public int getValor() {
-        return valor;
+        return 5;
     }
 }

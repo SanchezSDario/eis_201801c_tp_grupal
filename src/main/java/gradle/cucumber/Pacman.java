@@ -11,11 +11,7 @@ public class Pacman {
         return puntos;
     }
 
-    public void sumPuntos(int puntos) {
-        this.puntos += puntos;
-    }
-
-    public void comer(Biscuit biscuit) {
-        this.puntos += biscuit.getValor();
+    public void comer(Comestible comestible) {
+        this.puntos = comestible.getValor();
     }
 }

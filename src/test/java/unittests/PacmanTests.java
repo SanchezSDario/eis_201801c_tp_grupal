@@ -1,6 +1,7 @@
 package unittests;
 
 import gradle.cucumber.Biscuit;
+import gradle.cucumber.Fruta;
 import gradle.cucumber.Pacman;
 import org.junit.Assert;
 import org.junit.Before;
@@ -22,6 +23,14 @@ public class PacmanTests {
         pacman.comer(biscuit);
 
         Assert.assertThat(pacman.getPuntos(), is(5));
+    }
+
+    @Test
+    public void test_pacman_come_fruta_y_suma_10_puntos() {
+        Fruta fruta = new Fruta();
+        pacman.comer(fruta);
+
+        Assert.assertThat(pacman.getPuntos(), is(10));
     }
 
 }
