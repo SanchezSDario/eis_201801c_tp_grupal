@@ -1,6 +1,6 @@
 package gradle.cucumber;
 
-public class Fantasma {
+public class Fantasma implements Comestible{
 
     private EstadoEtereo estadoEtereo = EstadoEtereo.TANGIBLE;
 
@@ -8,5 +8,11 @@ public class Fantasma {
 
     public void setEstadoEtereo(EstadoEtereo estadoEtereo){
         this.estadoEtereo = estadoEtereo;
+    }
+
+    @Override
+    public int getValor() {
+        setEstadoEtereo(EstadoEtereo.INTANGIBLE);
+        return 0;
     }
 }
