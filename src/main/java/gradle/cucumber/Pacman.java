@@ -8,7 +8,6 @@ public class Pacman {
     public Pacman() {
         puntos = 0;
         estadoVital = EstadoVital.VIVO;
-
     }
 
     public int getPuntos() {
@@ -18,7 +17,7 @@ public class Pacman {
     public EstadoVital getEstadoVital() { return this.estadoVital; }
 
     public void comer(Comestible comestible) {
-        this.puntos = comestible.getValor();
+        this.puntos += comestible.getValor();
     }
 
     public void chocar(Fantasma fantasma) {

@@ -59,4 +59,23 @@ public class BasicStepdefs {
 
     @Then("^pacman muere$")
     public void pacmanMuere() { Assert.assertEquals(pacman.getEstadoVital(), EstadoVital.MUERTO); }
+
+
+    //Pellet y debilitacion
+    @Given("^dados un pacman, un pellet y un fantasma$")
+    public void dadosUnPacmanUnPelletYUnFantasma(){
+        pacman = new Pacman();
+        fantasma = GameEngine.crearFantasma();
+        pellet = new Pellet();
+    }
+
+    @When("^pacman come un pellet$")
+    public void pacmanComeUnPellet(){
+        pacman.comer(pellet);
+    }
+
+    @Then("^fantasma se debilita$")
+    public void fantasmaSeDebilita(){
+        Assert.assertEquals(fantasma.getEstadoEtereo(), EstadoEtereo.DEBILITADO);
+    }
 }
