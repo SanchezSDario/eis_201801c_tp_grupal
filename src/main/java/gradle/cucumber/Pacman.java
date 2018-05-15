@@ -16,11 +16,13 @@ public class Pacman {
 
     public EstadoVital getEstadoVital() { return this.estadoVital; }
 
+    public void setEstadoVital(EstadoVital estadoVital){this.estadoVital = estadoVital;}
+
     public void comer(Comestible comestible) {
         this.puntos += comestible.getValor();
     }
 
     public void chocar(Fantasma fantasma) {
-        this.estadoVital = EstadoVital.MUERTO;
+        GameEngine.colision(this, fantasma);
     }
 }

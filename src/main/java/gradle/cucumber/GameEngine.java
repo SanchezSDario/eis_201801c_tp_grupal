@@ -22,4 +22,9 @@ public class GameEngine {
     public static void debilitarFantasmas() {
         fantasmasEnJuego.forEach(f -> f.setEstadoEtereo(EstadoEtereo.DEBILITADO));
     }
+
+    public static void colision(Pacman pacman, Fantasma fantasma) {
+        if(fantasma.getEstadoEtereo() == EstadoEtereo.TANGIBLE) pacman.setEstadoVital(EstadoVital.MUERTO);
+        else pacman.comer(fantasma);
+    }
 }
