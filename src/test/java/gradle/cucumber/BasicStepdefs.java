@@ -7,8 +7,10 @@ import org.junit.Assert;
 
 public class BasicStepdefs {
     private Pacman pacman;
-    private Biscuit biscuit;
+    private Comestible biscuit;
+    private Comestible fruta;
 
+    //Biscuit
     @Given("^dados un pacman y un biscuit$")
     public void dados_un_pacman_y_un_biscuit() {
         pacman = new Pacman();
@@ -25,4 +27,20 @@ public class BasicStepdefs {
         Assert.assertEquals(pacman.getPuntos(), 5);
     }
 
+    //Fruta
+    @Given("^dados un pacman y una fruta$")
+    public void dados_un_pacman_y_una_fruta() {
+        pacman = new Pacman();
+        fruta = new Fruta();
+    }
+
+    @When("^pacman come una fruta$")
+    public void pacman_come_una_fruta() {
+        pacman.comer(fruta);
+    }
+
+    @Then("^pacman tiene 10 puntos$")
+    public void pacman_tiene_10_puntos() {
+        Assert.assertEquals(pacman.getPuntos(), 10);
+    }
 }
