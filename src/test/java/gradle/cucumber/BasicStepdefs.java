@@ -1,5 +1,6 @@
 package gradle.cucumber;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -9,6 +10,8 @@ public class BasicStepdefs {
     private Pacman pacman;
     private Comestible biscuit;
     private Comestible fruta;
+    private Fantasma fantasma;
+    private Comestible pellet;
 
     //Biscuit
     @Given("^dados un pacman y un biscuit$")
@@ -40,7 +43,39 @@ public class BasicStepdefs {
     }
 
     @Then("^pacman tiene 10 puntos$")
-    public void pacman_tiene_10_puntos() {
-        Assert.assertEquals(pacman.getPuntos(), 10);
+    public void pacman_tiene_10_puntos() { Assert.assertEquals(pacman.getPuntos(), 10); }
+
+    //Fantasma
+    @Given("^dados un pacman y un fantasma$")
+    public void dadosUnPacmanYUnFantasma(){
+        pacman = new Pacman();
+        fantasma = new Fantasma();
+    }
+
+    @When("^pacman choca contra fantasma$")
+    public void pacmanChocaContraFantasma() {
+        pacman.chocar(fantasma);
+    }
+
+    @Then("^pacman muere$")
+    public void pacmanMuere() { Assert.assertEquals(pacman.getEstadoVital(), EstadoVital.MUERTO); }
+
+
+    //Pellet y debilitacion
+    @Given("^dados un pacman, un pellet y un fantasma$")
+    public void dadosUnPacmanUnPelletYUnFantasma(){
+        pacman = new Pacman();
+        fantasma = GameEngine.crearFantasma();
+        pellet = new Pellet();
+    }
+
+    @When("^pacman come un pellet$")
+    public void pacmanComeUnPellet(){
+        pacman.comer(pellet);
+    }
+
+    @Then("^fantasma se debilita$")
+    public void fantasmaSeDebilita(){
+        Assert.assertEquals(fantasma.getEstadoEtereo(), EstadoEtereo.DEBILITADO);
     }
 }
