@@ -97,4 +97,21 @@ public class BasicStepdefs {
         Assert.assertEquals(pacman.getEstadoVital(), EstadoVital.VIVO);
         Assert.assertEquals(fantasma.getEstadoEtereo(), EstadoEtereo.INTANGIBLE);
     }
+
+    @Given("^dados un pacman y un fantasma sin cuerpo$")
+    public void dadosUnPacmanYUnFantasmaSinCuerpo() throws Throwable {
+        pacman = new Pacman();
+        fantasma = new Fantasma();
+        fantasma.setEstadoEtereo(EstadoEtereo.INTANGIBLE);
+    }
+
+    @When("^pacman choca contra fantasma sin cuerpo$")
+    public void pacmanChocaContraFantasmaSinCuerpo() throws Throwable {
+        pacman.chocar(fantasma);
+    }
+
+    @Then("^pacman no muere$")
+    public void pacmanNoMuere() throws Throwable {
+        Assert.assertEquals(pacman.getEstadoVital(), EstadoVital.VIVO);
+    }
 }
