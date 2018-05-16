@@ -11,13 +11,7 @@ public class GameEngine {
 
     private GameEngine() { }
 
-    private static ArrayList<Fantasma> fantasmasEnJuego = new ArrayList<>();
-
-    public static Fantasma crearFantasma(){
-        Fantasma nuevoFantasma = new Fantasma();
-        fantasmasEnJuego.add(nuevoFantasma);
-        return nuevoFantasma;
-    }
+    public static ArrayList<Fantasma> fantasmasEnJuego = new ArrayList<>();
 
     public static void debilitarFantasmas() {
         fantasmasEnJuego.forEach(f -> f.setEstadoEtereo(EstadoEtereo.DEBILITADO));

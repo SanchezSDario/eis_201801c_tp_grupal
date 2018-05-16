@@ -14,7 +14,7 @@ public class PacmanComePelletDef {
     @Given("^dados un pacman, un pellet y un fantasma$")
     public void dadosUnPacmanUnPelletYUnFantasma(){
         pacman = new Pacman();
-        fantasma = GameEngine.crearFantasma();
+        fantasma = new Fantasma();
         pellet = new Pellet();
     }
 
