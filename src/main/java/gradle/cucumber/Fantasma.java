@@ -2,6 +2,10 @@ package gradle.cucumber;
 
 public class Fantasma implements Comestible{
 
+    public Fantasma(){
+        GameEngine.fantasmasEnJuego.add(this);
+    }
+
     private EstadoEtereo estadoEtereo = EstadoEtereo.TANGIBLE;
 
     public EstadoEtereo getEstadoEtereo() { return estadoEtereo; }
